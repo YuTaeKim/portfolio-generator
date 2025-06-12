@@ -30,7 +30,7 @@ const Upload: React.FC = () => {
         throw new Error('User not authenticated');
       }
 
-      const { data, error } = await supabase
+      const { data: _data, error } = await supabase
         .from('documents')
         .insert([
           {
